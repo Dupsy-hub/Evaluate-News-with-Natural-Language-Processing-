@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 100vh;
+}
+
+main {
+    flex: 2;
+    justify-content: center;
+    text-align: left;
+    margin: 2rem;
+    font: 300 1rem "Roboto", sans-serif;
+    background: rgba(238, 234, 234, 0.7);
+
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.list{
+    margin-top: 20px;
+}
+
+

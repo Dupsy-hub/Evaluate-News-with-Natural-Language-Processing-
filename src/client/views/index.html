@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Sentiment Analyzer</title>
+        </head>
+
+    <body>
+
+        <header>
+            <h1>
+                Evaluate News with NLP
+            </h1>                
+        </header>
+
+        <main>
+            <p>Enter a URL of an article / a blog to discover its sentiment.</p>
+            <section>                
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="text" name="input" value=""  placeholder="Enter URL here">
+                    <div id="false"></div>
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <strong id="title">Sentiment Analysis Results:</strong>
+                    <ul class="list">
+                        <li id="polarity"></li>
+                        <li id="agreement"></li>
+                        <li id="subjectivity"></li>
+                        <li id="confidence"></li>
+                        <li id="irony"></li>
+                    </ul>
+                </section>
+                </section>
+                
+            </section>
+        </main>
+
+        <footer>
+            <p>Udacity Front End Web Developer nanodegree</p>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                    //registration was successful
+                    console.log('ServiceWorker registration is successful: ', registration.scope);
+                    }, function(err) {
+                    //registration failed 
+                    console.log('ServiceWorker registration failed: ', err);
+
+                });
+            };
+           </script>         
+
+    </body>
+</html>
